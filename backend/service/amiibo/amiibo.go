@@ -13,8 +13,8 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc/status"
 
-	amiibov1 "github.com/lyft/clutch/backend/api/amiibo/v1"
 	"github.com/lyft/clutch/backend/service"
+	amiibov1 "github.com/pcn/clutch-custom-gateway/backend/api/amiibo/v1"
 )
 
 const Name = "clutch.service.amiibo"

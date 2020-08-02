@@ -21,7 +21,7 @@ const Name = "clutch.service.amiibo"
 
 const apiHost = "https://www.amiiboapi.com"
 
-func New(cfg *any.Any, logger *zap.logger, scope tally.Scope) (service.Service, error) {
+func New(cfg *any.Any, logger *zap.Logger, scope tally.Scope) (service.Service, error) {
 	return &client{http: &http.Client{}}, nil
 }
 
@@ -64,8 +64,8 @@ func charactersFromJSON(data []byte) ([]*amiibov1.Amiibo, error) {
 	return ret, nil
 }
 
-func (c *client) GetAmiibo(ctxx context.Context, name string) ([]*amiibov1.Amiibo, error) {
-	url = fmt.Sprintf("%s/api/amiibo?character=%s", apiHost, name)
+func (c *client) GetAmiibo(ctx context.Context, name string) ([]*amiibov1.Amiibo, error) {
+	url := fmt.Sprintf("%s/api/amiibo?character=%s", apiHost, name)
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 	if err != nil {
 		return nil, err
@@ -74,7 +74,7 @@ func (c *client) GetAmiibo(ctxx context.Context, name string) ([]*amiibov1.Amiib
 	if err != nil {
 		return nil, err
 	}
-	defer resp.body.Close()
+	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err

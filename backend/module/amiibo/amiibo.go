@@ -10,8 +10,8 @@ import (
 
 	"github.com/lyft/clutch/backend/module"
 	"github.com/lyft/clutch/backend/service"
-	amiibov1 "github.com/pcn/clutch/backend/api/amiibo/v1"
-	amiiboservice "github.com/pcn/clutch/backend/service/amiibo"
+	amiibov1 "github.com/pcn/clutch-custom-gateway/backend/api/amiibo/v1"
+	amiiboservice "github.com/pcn/clutch-custom-gateway/backend/service/amiibo"
 )
 
 const Name = "clutch.module.amiibo"

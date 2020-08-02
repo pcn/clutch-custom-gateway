@@ -4,9 +4,9 @@ import (
 	"github.com/lyft/clutch/backend/gateway"
 
 	"github.com/pcn/clutch-custom-gateway/backend/cmd/assets"
+	amiibomod "github.com/pcn/clutch-custom-gateway/backend/module/amiibo"
 	"github.com/pcn/clutch-custom-gateway/backend/module/echo"
-	amiibomod "github.com/pcn/clutch/backend/module/amiibo"
-	amiiboservice "github.com/pcn/clutch/backend/service/amiibo"
+	amiiboservice "github.com/pcn/clutch-custom-gateway/backend/service/amiibo"
 )
 
 func main() {

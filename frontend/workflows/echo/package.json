@@ -1,0 +1,30 @@
+{
+  "name": "@clutch-custom-gateway/echo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Echo workflow",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "BABEL_ENV=build babel src --out-dir dist --source-maps --extensions .js,.jsx --no-comments",
+    "compile:watch": "yarn run compile --watch",
+    "lint": "eslint --ext .js,.jsx .",
+    "lint:fix": "yarn run lint --fix",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "yarn run test --collect-coverage",
+    "test:watch": "yarn run test --watch",
+    "upgrade": "yarn upgrade"
+  },
+  "dependencies": {
+    "@clutch-sh/core": "^0.0.0-beta",
+    "@clutch-sh/data-layout": "^0.0.0-beta",
+    "@clutch-sh/wizard": "^0.0.0-beta",
+    "@material-ui/core": "^4.9.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-is": "^16.8.0"
+  },
+  "devDependencies": {
+    "@clutch-sh/tools": "^0.0.0-beta"
+  }
+}
